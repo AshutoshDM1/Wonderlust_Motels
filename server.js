@@ -19,7 +19,8 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 
 // Basic MongoDB setup
-const mongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
+// const mongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
+const mongoUrl = "mongodb+srv://downlodemaster2:eAGmRemCcdSQB6LO@cluster0.1d21wvg.mongodb.net/wanderlust";
 const mongoose = require("mongoose");
 async function main() {
   await mongoose.connect(mongoUrl);

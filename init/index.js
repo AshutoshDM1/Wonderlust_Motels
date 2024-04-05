@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const initdata = require("./data.js");
 const Listing = require("../models/Listing.js");
 
-const mongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
+const mongoUrl = "mongodb+srv://downlodemaster2:eAGmRemCcdSQB6LO@cluster0.1d21wvg.mongodb.net/wanderlust";
 
 async function main() {
   await mongoose.connect(mongoUrl);
