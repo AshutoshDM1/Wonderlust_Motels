@@ -20,7 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // Basic MongoDB setup
 // const mongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
-const mongoUrl = "mongodb+srv://downlodemaster2:eAGmRemCcdSQB6LO@cluster0.1d21wvg.mongodb.net/wanderlust";
+const mongoUrl = "mongodb+srv://downlodemaster2:eAGmRemCcdSQB6LO@cluster0.1d21wvg.mongodb.net/wanderlust?retryWrites=true&w=majority&appName=Cluster0";
+
 const mongoose = require("mongoose");
 async function main() {
   await mongoose.connect(mongoUrl);
@@ -48,7 +49,7 @@ const Listing = require("./models/Listing.js");
 
 // Index Route setup
 
-app.get("/listing", async (req, res) => {
+app.get("/listings", async (req, res) => {
   const allListings = await Listing.find({});
   res.render("index.ejs", { allListings: allListings });
 });
