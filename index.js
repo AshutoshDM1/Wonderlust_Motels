@@ -9,7 +9,7 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.redirect("listing");
 });
 
 // Basic Ejs setup
@@ -49,7 +49,7 @@ const Listing = require("./models/Listing.js");
 
 // Index Route setup
 
-app.get("/listings", async (req, res) => {
+app.get("/listing", async (req, res) => {
   const allListings = await Listing.find({});
   res.render("index.ejs", { allListings: allListings });
 });
