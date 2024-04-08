@@ -17,7 +17,7 @@
   /* background-color: #961496; */
   height: 69px;
   width: 69px;
-  background-image: url("/Logos/air_logo.png");
+  background-image: url("/air_logo.png");
   background-size: cover;
   border-radius: 50%;
 }
@@ -98,4 +98,9 @@
   /* background-color: #ece9e9; */
   font-size: 30px;
   color: #ff505c;
+}
+
+.New_btn {
+  border: none;
+  background-color: transparent;
 }

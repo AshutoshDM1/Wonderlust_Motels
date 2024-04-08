@@ -45,3 +45,8 @@
   width: 30vh;
   cursor: pointer;
 } 
+
+.Card_link {
+  text-decoration: none;
+  color: black;
+}
