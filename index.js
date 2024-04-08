@@ -1,11 +1,11 @@
 // Basic Express setup
-
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
 
 app.get("/", (req, res) => {
@@ -34,18 +34,6 @@ main()
 
 const Listing = require("./models/Listing.js");
 
-// app.get("/listings", async (req, res) => {
-//   let slisting = new Listing({
-//     title: "My New Title 2",
-//     description: "This is a description for my listing.",
-//     price: 1232,
-//     location: "New York City",
-//     country: "United States of America",
-//   });
-
-//   await slisting.save();
-//   res.send("its done");
-// });
 
 // Index Route setup
 
@@ -101,3 +89,18 @@ app.delete("/listings/:id", async (req, res) => {
   const listing = await Listing.findByIdAndDelete(id);
   res.redirect("/listing");
 });
+
+
+
+//// Day - 2 
+
+// using ejs mate 
+
+const ejsmate  = require('ejs-mate');
+app.engine("ejs", ejsmate);
+
+// Day -3 
+
+// Making Public Folder for static files and images to be used in the project setup
+
+app.use(express.static(path.join(__dirname, "/public")));

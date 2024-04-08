@@ -1,0 +1,47 @@
+.massage_box {
+  height: 10vh;
+  /* width: 100vw; */
+  /* background-color: #8ccaf4; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.massage {
+  font-family: cursive;
+  font-size: 1.2rem;
+  height: 80%;
+  width: 40%;
+  background-color: #e4e4e4;
+  border-radius: 20px;
+  padding-left: 5%;
+  display: flex;
+  align-items: center;
+}
+.main {
+  /* height: 100vh; */
+  background-color: #e4e4e4;
+  display: flex;
+  justify-content: center;
+  padding-top : 3vh;
+  padding-bottom : 3vh;
+}
+
+.cards_container {
+  background-color: rgb(255, 255, 255);
+  height: 80%;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 6vh;
+  padding-top : 3vh;
+  padding-bottom : 3vh;
+
+}
+.card {
+  margin-top:4vh ;
+  min-height: 40vh;
+  max-height: 80vh;
+  width: 30vh;
+  cursor: pointer;
+} 
